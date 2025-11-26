@@ -1,0 +1,5 @@
+IP: 89.169.169.113;
+name_taski: https://taski12.duckdns.org;
+name_kittygram: https://kittygram12.duckdns.org;
+login: dmitry;
+password: parol7291;

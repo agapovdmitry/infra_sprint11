@@ -1,0 +1,17 @@
+[Unit]
+Description=Gunicorn Kittygram Backend
+After=network.target
+
+[Service]
+User=yc-user
+WorkingDirectory=/home/yc-user/kittygram/backend
+EnvironmentFile=/home/yc-user/kittygram/backend/.env
+ExecStart=/home/yc-user/kittygram/backend/venv/bin/gunicorn \
+  --workers 3 \
+  --bind 127.0.0.1:8080 \
+  kittygram_backend.wsgi:application
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
